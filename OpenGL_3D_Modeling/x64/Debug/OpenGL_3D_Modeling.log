@@ -1,2 +1,528 @@
-﻿  main.cpp
-  OpenGL_3D_Modeling.vcxproj -> D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\x64\Debug\OpenGL_3D_Modeling.exe
+﻿  Edge.cpp
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Edge.cpp(53,12): warning C4834: discarding return value of function with 'nodiscard' attribute
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Edge.cpp(68,11): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,47): error C2665: 'std::pair<Vertex *const ,Vertex *const >::pair': none of the 2 overloads could convert all the argument types
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(213,5): message : could be 'std::pair<Vertex *const ,Vertex *const >::pair(std::pair<Vertex *const ,Vertex *const > &&)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(212,5): message : or       'std::pair<Vertex *const ,Vertex *const >::pair(const std::pair<Vertex *const ,Vertex *const > &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(707,1): message : while trying to match the argument list '(Vertex)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(811): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Vertex&>(_Alloc &,_Objty *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>,
+              _Ty=std::pair<Vertex *const ,Vertex *const >,
+              _Objty=std::pair<Vertex *const ,Vertex *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(812): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Vertex&>(_Alloc &,_Objty *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>,
+              _Ty=std::pair<Vertex *const ,Vertex *const >,
+              _Objty=std::pair<Vertex *const ,Vertex *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1051): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Vertex&>(_Alnode &,std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1066): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Vertex&>(_Alnode &,std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Vertex&>(std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Vertex&>(std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Edge.cpp(12): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Vertex*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >,
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Iter=Vertex *
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Edge.cpp(12): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Vertex*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >,
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Iter=Vertex *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,47): error C2665: 'std::pair<Triangle *const ,Triangle *const >::pair': none of the 2 overloads could convert all the argument types
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(213,5): message : could be 'std::pair<Triangle *const ,Triangle *const >::pair(std::pair<Triangle *const ,Triangle *const > &&)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(212,5): message : or       'std::pair<Triangle *const ,Triangle *const >::pair(const std::pair<Triangle *const ,Triangle *const > &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(707,1): message : while trying to match the argument list '(Triangle)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(811): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Triangle&>(_Alloc &,_Objty *const ,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<std::allocator<std::pair<Triangle *const ,Triangle *const >>>::void_pointer>>,
+              _Ty=std::pair<Triangle *const ,Triangle *const >,
+              _Objty=std::pair<Triangle *const ,Triangle *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(812): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Triangle&>(_Alloc &,_Objty *const ,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<std::allocator<std::pair<Triangle *const ,Triangle *const >>>::void_pointer>>,
+              _Ty=std::pair<Triangle *const ,Triangle *const >,
+              _Objty=std::pair<Triangle *const ,Triangle *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1051): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Triangle&>(_Alnode &,std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<std::allocator<std::pair<Triangle *const ,Triangle *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1066): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Triangle&>(_Alnode &,std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<std::allocator<std::pair<Triangle *const ,Triangle *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Triangle&>(std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Kty=Triangle *const ,
+              _Ty=Triangle *const ,
+              _Pr=std::less<Triangle *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Triangle&>(std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Kty=Triangle *const ,
+              _Ty=Triangle *const ,
+              _Pr=std::less<Triangle *const >
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Edge.cpp(32): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Triangle*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Triangle *const ,
+              _Ty=Triangle *const ,
+              _Pr=std::less<Triangle *const >,
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Iter=Triangle *
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Edge.cpp(32): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Triangle*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Triangle *const ,
+              _Ty=Triangle *const ,
+              _Pr=std::less<Triangle *const >,
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Iter=Triangle *
+          ]
+  Shape.cpp
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\MapUtils.h(6,6): warning C4834: discarding return value of function with 'nodiscard' attribute
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Shape.cpp(11): message : see reference to function template instantiation 'bool mapContains<Vertex*>(std::map<Vertex *const ,Vertex *const ,std::less<Vertex *const >,std::allocator<std::pair<Vertex *const ,Vertex *const >>>,T)' being compiled
+          with
+          [
+              T=Vertex *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,47): error C2665: 'std::pair<Vertex *const ,Vertex *const >::pair': none of the 2 overloads could convert all the argument types
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(213,5): message : could be 'std::pair<Vertex *const ,Vertex *const >::pair(std::pair<Vertex *const ,Vertex *const > &&)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(212,5): message : or       'std::pair<Vertex *const ,Vertex *const >::pair(const std::pair<Vertex *const ,Vertex *const > &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(707,1): message : while trying to match the argument list '(Vertex)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(811): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Vertex&>(_Alloc &,_Objty *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>,
+              _Ty=std::pair<Vertex *const ,Vertex *const >,
+              _Objty=std::pair<Vertex *const ,Vertex *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(812): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Vertex&>(_Alloc &,_Objty *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>,
+              _Ty=std::pair<Vertex *const ,Vertex *const >,
+              _Objty=std::pair<Vertex *const ,Vertex *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1051): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Vertex&>(_Alnode &,std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1066): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Vertex&>(_Alnode &,std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Vertex&>(std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Vertex&>(std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Shape.cpp(12): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Vertex*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >,
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Iter=Vertex *
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Shape.cpp(12): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Vertex*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >,
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Iter=Vertex *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,47): error C2665: 'std::pair<Edge *const ,Edge *const >::pair': none of the 2 overloads could convert all the argument types
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(213,5): message : could be 'std::pair<Edge *const ,Edge *const >::pair(std::pair<Edge *const ,Edge *const > &&)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(212,5): message : or       'std::pair<Edge *const ,Edge *const >::pair(const std::pair<Edge *const ,Edge *const > &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(707,1): message : while trying to match the argument list '(Edge)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(811): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Edge&>(_Alloc &,_Objty *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>,
+              _Ty=std::pair<Edge *const ,Edge *const >,
+              _Objty=std::pair<Edge *const ,Edge *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(812): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Edge&>(_Alloc &,_Objty *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>,
+              _Ty=std::pair<Edge *const ,Edge *const >,
+              _Objty=std::pair<Edge *const ,Edge *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1051): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Edge&>(_Alnode &,std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1066): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Edge&>(_Alnode &,std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Edge&>(std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Edge&>(std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Shape.cpp(24): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Edge*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >,
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Iter=Edge *
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Shape.cpp(24): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Edge*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >,
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Iter=Edge *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,47): error C2665: 'std::pair<Triangle *const ,Triangle *const >::pair': none of the 2 overloads could convert all the argument types
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(213,5): message : could be 'std::pair<Triangle *const ,Triangle *const >::pair(std::pair<Triangle *const ,Triangle *const > &&)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(212,5): message : or       'std::pair<Triangle *const ,Triangle *const >::pair(const std::pair<Triangle *const ,Triangle *const > &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(707,1): message : while trying to match the argument list '(Triangle)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(811): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Triangle&>(_Alloc &,_Objty *const ,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<std::allocator<std::pair<Triangle *const ,Triangle *const >>>::void_pointer>>,
+              _Ty=std::pair<Triangle *const ,Triangle *const >,
+              _Objty=std::pair<Triangle *const ,Triangle *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(812): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Triangle&>(_Alloc &,_Objty *const ,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<std::allocator<std::pair<Triangle *const ,Triangle *const >>>::void_pointer>>,
+              _Ty=std::pair<Triangle *const ,Triangle *const >,
+              _Objty=std::pair<Triangle *const ,Triangle *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1051): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Triangle&>(_Alnode &,std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<std::allocator<std::pair<Triangle *const ,Triangle *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1066): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Triangle&>(_Alnode &,std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<std::allocator<std::pair<Triangle *const ,Triangle *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Triangle&>(std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Kty=Triangle *const ,
+              _Ty=Triangle *const ,
+              _Pr=std::less<Triangle *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Triangle&>(std::_Tree_node<std::pair<Triangle *const ,Triangle *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Triangle &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Kty=Triangle *const ,
+              _Ty=Triangle *const ,
+              _Pr=std::less<Triangle *const >
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Shape.cpp(36): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Triangle*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Triangle *const ,
+              _Ty=Triangle *const ,
+              _Pr=std::less<Triangle *const >,
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Iter=Triangle *
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Shape.cpp(36): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Triangle*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Triangle *const ,
+              _Ty=Triangle *const ,
+              _Pr=std::less<Triangle *const >,
+              _Alloc=std::allocator<std::pair<Triangle *const ,Triangle *const >>,
+              _Iter=Triangle *
+          ]
+  Triangle.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,47): error C2665: 'std::pair<Edge *const ,Edge *const >::pair': none of the 2 overloads could convert all the argument types
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(213,5): message : could be 'std::pair<Edge *const ,Edge *const >::pair(std::pair<Edge *const ,Edge *const > &&)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(212,5): message : or       'std::pair<Edge *const ,Edge *const >::pair(const std::pair<Edge *const ,Edge *const > &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(707,1): message : while trying to match the argument list '(Edge)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(811): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Edge&>(_Alloc &,_Objty *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>,
+              _Ty=std::pair<Edge *const ,Edge *const >,
+              _Objty=std::pair<Edge *const ,Edge *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(812): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Edge&>(_Alloc &,_Objty *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>,
+              _Ty=std::pair<Edge *const ,Edge *const >,
+              _Objty=std::pair<Edge *const ,Edge *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1051): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Edge&>(_Alnode &,std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1066): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Edge&>(_Alnode &,std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Edge&>(std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Edge&>(std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.cpp(16): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Edge*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >,
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Iter=Edge *
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.cpp(16): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Edge*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >,
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Iter=Edge *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,47): error C2665: 'std::pair<Vertex *const ,Vertex *const >::pair': none of the 2 overloads could convert all the argument types
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(213,5): message : could be 'std::pair<Vertex *const ,Vertex *const >::pair(std::pair<Vertex *const ,Vertex *const > &&)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(212,5): message : or       'std::pair<Vertex *const ,Vertex *const >::pair(const std::pair<Vertex *const ,Vertex *const > &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(707,1): message : while trying to match the argument list '(Vertex)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(811): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Vertex&>(_Alloc &,_Objty *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>,
+              _Ty=std::pair<Vertex *const ,Vertex *const >,
+              _Objty=std::pair<Vertex *const ,Vertex *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(812): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Vertex&>(_Alloc &,_Objty *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>,
+              _Ty=std::pair<Vertex *const ,Vertex *const >,
+              _Objty=std::pair<Vertex *const ,Vertex *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1051): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Vertex&>(_Alnode &,std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1066): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Vertex&>(_Alnode &,std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<std::allocator<std::pair<Vertex *const ,Vertex *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Vertex&>(std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Vertex&>(std::_Tree_node<std::pair<Vertex *const ,Vertex *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Vertex &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.cpp(19): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<const _Ty1>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >,
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Ty1=Vertex *const ,
+              _Iter=Vertex *const
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.cpp(19): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<const _Ty1>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Vertex *const ,
+              _Ty=Vertex *const ,
+              _Pr=std::less<Vertex *const >,
+              _Alloc=std::allocator<std::pair<Vertex *const ,Vertex *const >>,
+              _Ty1=Vertex *const ,
+              _Iter=Vertex *const
+          ]
+  Vertex.cpp
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Vertex.cpp(48,8): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,47): error C2665: 'std::pair<Edge *const ,Edge *const >::pair': none of the 2 overloads could convert all the argument types
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(213,5): message : could be 'std::pair<Edge *const ,Edge *const >::pair(std::pair<Edge *const ,Edge *const > &&)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(212,5): message : or       'std::pair<Edge *const ,Edge *const >::pair(const std::pair<Edge *const ,Edge *const > &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(707,1): message : while trying to match the argument list '(Edge)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(811): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Edge&>(_Alloc &,_Objty *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>,
+              _Ty=std::pair<Edge *const ,Edge *const >,
+              _Objty=std::pair<Edge *const ,Edge *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(812): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Edge&>(_Alloc &,_Objty *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>,
+              _Ty=std::pair<Edge *const ,Edge *const >,
+              _Objty=std::pair<Edge *const ,Edge *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1051): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Edge&>(_Alnode &,std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1066): message : see reference to function template instantiation 'std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<Edge&>(_Alnode &,std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<std::allocator<std::pair<Edge *const ,Edge *const >>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Edge&>(std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(1279): message : see reference to function template instantiation 'std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace_hint<Edge&>(std::_Tree_node<std::pair<Edge *const ,Edge *const >,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,Edge &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Vertex.cpp(21): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Edge*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >,
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Iter=Edge *
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Vertex.cpp(21): message : see reference to function template instantiation 'void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<Edge*>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Kty=Edge *const ,
+              _Ty=Edge *const ,
+              _Pr=std::less<Edge *const >,
+              _Alloc=std::allocator<std::pair<Edge *const ,Edge *const >>,
+              _Iter=Edge *
+          ]
+  Generating Code...

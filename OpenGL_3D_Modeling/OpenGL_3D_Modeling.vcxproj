@@ -143,7 +143,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="C:\c++ stuff\OpenGLTest\OpenGLTest\glad.c" />
+    <ClCompile Include="Edge.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="UiElement.cpp" />
+    <ClCompile Include="UiManager.cpp" />
+    <ClCompile Include="Vertex.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Edge.h" />
+    <ClInclude Include="Error.h" />
+    <ClInclude Include="Primitive.h" />
+    <ClInclude Include="Shape.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="MapUtils.h" />
+    <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
