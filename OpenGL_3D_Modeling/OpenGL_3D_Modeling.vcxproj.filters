@@ -13,54 +13,89 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\3D">
+      <UniqueIdentifier>{5dff16a5-fb5c-4f7a-917c-3545ac4bb8e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{99af5181-deb2-4384-b762-7a186a129d46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{02a2ffff-474e-4709-9361-01de11304322}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\c++ stuff\OpenGLTest\OpenGLTest\glad.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UiElement.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UiManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vertex.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Edge.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Triangle.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\3D</Filter>
     </ClCompile>
     <ClCompile Include="Shape.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Vertex.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="UiManager.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UiElement.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\c++ stuff\OpenGLTest\OpenGLTest\glad.c">
+      <Filter>Source Files\Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Vertex.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Edge.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Triangle.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Shape.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Error.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\3D</Filter>
     </ClInclude>
     <ClInclude Include="Primitive.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Error.h">
+      <Filter>Source Files\Utils</Filter>
     </ClInclude>
     <ClInclude Include="MapUtils.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Utils</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Vertex_vShader.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Vertex_fShader.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="ShadedTriangle_vShader.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="ShadedTriangle_fShader.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Light_vShader.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Light_fShader.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Triangle_vShader.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Triangle_fShader.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

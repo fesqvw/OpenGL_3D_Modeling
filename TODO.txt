@@ -1,0 +1,13 @@
+- figure out how I want to draw things
+	-> how to define translation, rotations, and scaling
+		-> depends on the vertices
+- define and create shaders for : (Shape is just an abstracton, Edge is just a line)
+	-> Vertices
+	-> Triangles
+- define draw methods for :
+	-> Vertex : (selected or not)
+	-> Edge : (vertex selected or not / selected or not)
+	-> Triangle : (selected or not / shaded or not / wireframe or not)
+	-> Shape : (draw everything with the needed parameters Vertex/Edge/Triangle : what is selected, shaded, wireframe)
+- create camera class
+- create window manager

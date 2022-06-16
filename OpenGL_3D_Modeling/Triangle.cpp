@@ -7,7 +7,7 @@ Create a triangle while having all the information
 */
 Triangle::Triangle(Shape* s , array<Edge*, 3> edges) : ownerShape(s)
 {
-	if (!s) {
+	if (!s || edges.size() != 3) {
 		throw IllegalArgument;
 	}
 	for (int i = 0 ; i < 3 ; ++i) //add all edges to the triangle

@@ -160,6 +160,16 @@
     <ClInclude Include="MapUtils.h" />
     <ClInclude Include="Vertex.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Light_fShader.txt" />
+    <Text Include="Light_vShader.txt" />
+    <Text Include="ShadedTriangle_vShader.txt" />
+    <Text Include="ShadedTriangle_fShader.txt" />
+    <Text Include="Triangle_fShader.txt" />
+    <Text Include="Triangle_vShader.txt" />
+    <Text Include="Vertex_fShader.txt" />
+    <Text Include="Vertex_vShader.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

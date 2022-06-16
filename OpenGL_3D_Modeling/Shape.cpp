@@ -2,6 +2,21 @@
 #include "MapUtils.h"
 
 
+Shape::Shape(Primitive p) {
+	/*
+	TODO : create shape using different primitives
+	-> for now : it will only create a simple triangle
+	*/
+	Vertex* v1 = new Vertex(this,1,0,0);
+	Vertex* v2 = new Vertex(this,0,1,0);
+	Vertex* v3 = new Vertex(this,0,0,1);
+	Edge* e1 = new Edge(this,v1,v2);
+	Edge* e2 = new Edge(this,v2,v3);
+	Edge* e3 = new Edge(this,v3,v1);
+	Triangle* t = new Triangle(this, {e1,e2,e3});
+
+}
+
 Shape::Shape(Triangle** setupTriangles, size_t n) {
 
 	if (n <= 0 || !setupTriangles) {

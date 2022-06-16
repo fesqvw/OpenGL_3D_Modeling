@@ -17,7 +17,8 @@ bool mapContains(map<T const , T const > map, T elem) {
 
 template <typename T>
 void mapForEach(map<T const , T const> mapFor, function< void(T) >& lambda) {
-	for (map<T const, T const >::iterator it = mapFor.begin(); it != mapFor.end(); ++it) {
+	//TODO : check 'typename' here
+	for (typename map<T const, T const>::iterator it = mapFor.begin(); it != mapFor.end(); ++it) {
 		lambda(it->first);
 	}
 }

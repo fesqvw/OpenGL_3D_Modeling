@@ -14,7 +14,7 @@
 	-> triangles : which edges it uses
 */
 
-enum Primitive {
+enum class Primitive {
 	SimpleTriangle,
 	Plane,
 	Cube

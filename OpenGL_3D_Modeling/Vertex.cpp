@@ -4,7 +4,7 @@
 #include "Shape.h"
 #include "MapUtils.h"
 
-Vertex::Vertex(Shape* s, double x, double y, double z) : x(x),y(y),z(z),ownerShape(s) {
+Vertex::Vertex(Shape* s, float x, float y, float z) : x(x),y(y),z(z),ownerShape(s) {
 	if (!s) {
 		throw IllegalArgument;
 	}

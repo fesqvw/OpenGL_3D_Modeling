@@ -1,7 +1,30 @@
 ﻿  Edge.cpp
-D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\MapUtils.h(20,40): error C2760: syntax error: unexpected token 'identifier', expected ';'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\MapUtils.h(9,6): warning C4834: discarding return value of function with 'nodiscard' attribute
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Edge.cpp(52): message : see reference to function template instantiation 'bool mapContains<Triangle*>(std::map<Triangle *const ,Triangle *const ,std::less<Triangle *const >,std::allocator<std::pair<Triangle *const ,Triangle *const >>>,T)' being compiled
+          with
+          [
+              T=Triangle *
+          ]
   Shape.cpp
-D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\MapUtils.h(20,40): error C2760: syntax error: unexpected token 'identifier', expected ';'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\MapUtils.h(9,6): warning C4834: discarding return value of function with 'nodiscard' attribute
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Shape.cpp(82): message : see reference to function template instantiation 'bool mapContains<Vertex*>(std::map<Vertex *const ,Vertex *const ,std::less<Vertex *const >,std::allocator<std::pair<Vertex *const ,Vertex *const >>>,T)' being compiled
+          with
+          [
+              T=Vertex *
+          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Shape.cpp(46): message : see reference to function template instantiation 'void Shape::addElement<Vertex*>(std::map<Vertex *const ,Vertex *const ,std::less<Vertex *const >,std::allocator<std::pair<Vertex *const ,Vertex *const >>>,const T,size_t *)' being compiled
+          with
+          [
+              T=Vertex *
+          ]
+  Triangle.cpp
   Vertex.cpp
-D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\MapUtils.h(20,40): error C2760: syntax error: unexpected token 'identifier', expected ';'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\MapUtils.h(9,6): warning C4834: discarding return value of function with 'nodiscard' attribute
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Vertex.cpp(45): message : see reference to function template instantiation 'bool mapContains<Edge*>(std::map<Edge *const ,Edge *const ,std::less<Edge *const >,std::allocator<std::pair<Edge *const ,Edge *const >>>,T)' being compiled
+          with
+          [
+              T=Edge *
+          ]
+  main.cpp
   Generating Code...
+  OpenGL_3D_Modeling.vcxproj -> D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\x64\Debug\OpenGL_3D_Modeling.exe

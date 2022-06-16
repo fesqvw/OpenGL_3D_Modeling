@@ -20,7 +20,7 @@ class Vertex {
 	//TODO : we will need a way to change the position
 	//TODO : we will need a way to draw the vertex
 public:
-	Vertex(Shape* s, double x, double y, double z);
+	Vertex(Shape* s, float x, float y, float z);
 	void addToEdge(Edge* e);
 	void removeFromEdge(Edge* e);
 	bool belongsTo(Edge* e);
@@ -28,9 +28,9 @@ public:
 	Shape* getOwner();
 
 private:
-	const double x = 0.0;
-	const double y = 0.0;
-	const double z = 0.0;
+	const float x = 0.0;
+	const float y = 0.0;
+	const float z = 0.0;
 	map< Edge* const, Edge* const> edges;
 	size_t nbEdges = 0;
 	Shape* const ownerShape = nullptr;
