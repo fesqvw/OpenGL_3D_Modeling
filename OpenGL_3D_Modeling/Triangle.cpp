@@ -1,5 +1,7 @@
 #include "Triangle.h"
 #include "Shape.h"
+#include "MapUtils.h"
+
 /*
 Create a triangle while having all the information
 */
@@ -13,11 +15,12 @@ Triangle::Triangle(Shape* s , array<Edge*, 3> edges) : ownerShape(s)
 		if (!edges[i]) {
 			throw IllegalArgument;
 		}
-		this->edges.insert(edges[i], edges[i]);
+		this->edges.insert({ edges[i], edges[i] });
 		map<Vertex* const, Vertex* const> edgeVertices = edges[i]->getVertices(); //add teh vertices of every edge, there should be (exactly) 3 distinct ones
-		for (map<Vertex* const, Vertex* const>::iterator it = edgeVertices.begin(); it != edgeVertices.end(); ++it) {
-			vertices.insert(it->first, it->first);
-		}
+
+		std::function<void(Vertex* const)> lambda = [](Vertex* const e) { e->remove(); };
+		mapForEach(edgeVertices, lambda);
+		
 	}
 
 	if (this->edges.size() != 3 || this->vertices.size() != 3) { //check that the arguments are correct
@@ -43,9 +46,9 @@ const map<Vertex* const, Vertex* const> Triangle::getVertices() {
 }
 
 void Triangle::remove() {
-	for (map<Edge* const, Edge* const>::iterator it = edges.begin(); it != edges.end(); ++it) {
-		it->first->remove();
-	}
+
+	std::function<void(Edge* const)> lambda = [](Edge* const e) { e->remove(); };
+	mapForEach(edges, lambda);
 	ownerShape->removeTriangle(this);
 	delete this;
 }

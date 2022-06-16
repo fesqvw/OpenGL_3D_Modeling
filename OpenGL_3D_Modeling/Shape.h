@@ -26,7 +26,7 @@ class Shape {
 	//TODO : we will need a way to draw the whole shape
 public:
 	Shape(Primitive p); 
-	void addShape(Shape* s);
+	void addShape(Shape* s); //TODO : define it once that will be used - not yet
 	void addVertex(Vertex* v);
 	void removeVertex(Vertex* v);
 	void addEdge(Edge *e);
@@ -43,4 +43,9 @@ private:
 	size_t nbEdges = 0;
 	map<Vertex* const, Vertex* const> vertices;
 	size_t nbVertices = 0;
+
+	template <typename T>
+	void addElement(map<T const, T const> toAddMap, T const elem, size_t* counter);
+	template <typename T>
+	void removeElement(map<T const, T const> toAddMap, T const elem, size_t* counter);
 };

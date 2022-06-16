@@ -31,7 +31,7 @@ private:
 	const double x = 0.0;
 	const double y = 0.0;
 	const double z = 0.0;
-	map<Edge* const, Edge* const> edges;
+	map< Edge* const, Edge* const> edges;
 	size_t nbEdges = 0;
 	Shape* const ownerShape = nullptr;
 };

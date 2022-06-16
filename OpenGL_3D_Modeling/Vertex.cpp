@@ -2,6 +2,7 @@
 #include "Vertex.h"
 #include "Edge.h"
 #include "Shape.h"
+#include "MapUtils.h"
 
 Vertex::Vertex(Shape* s, double x, double y, double z) : x(x),y(y),z(z),ownerShape(s) {
 	if (!s) {
@@ -18,7 +19,7 @@ void Vertex::addToEdge(Edge* const e) {
 	if (belongsTo(e)) {
 		return;
 	}
-	edges.insert(e, e);
+	edges.insert({ e, e });
 	++nbEdges;
 }
 
@@ -36,31 +37,17 @@ void Vertex::removeFromEdge(Edge* const e) {
 	}
 }
 
-/*
-TODO : create util --> mapContains(element,map) 
-*/
+
 bool Vertex::belongsTo(Edge* const e) {
 	if (!e) {
 		throw IllegalArgument;
 	}
-	try
-	{
-		edges.at(e);
-		return true;
-	}
-	catch (const std::exception)
-	{
-		return false;
-	}
+	return mapContains(edges,e);
 }
 
-/*
-TODO : create util -> map for each , taking a type T and lambda T -> Unit
-*/
 void Vertex::remove() {
-	for (map<Edge* const, Edge* const>::iterator it = edges.begin(); it != edges.end(); ++it ) {
-		it->first->remove();
-	}
+	std::function<void(Edge* const)> lambda = [](Edge* const e) { e->remove(); };
+	mapForEach(edges, lambda);
 	ownerShape->removeVertex(this);
 	delete this;
 }
