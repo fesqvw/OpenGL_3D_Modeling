@@ -1,76 +1,55 @@
-//1 edge is defined by 2 vertices
 #include "Edge.h"
-#include "Shape.h"
-#include "Triangle.h"
-#include "MapUtils.h"
 
-Edge::Edge(Shape* s, Vertex* u, Vertex* v) :ownerShape(s)
-{
-	if (!s || !u || !v || u == v) {
-		throw IllegalArgument;
+/*
+Create an edge
+*/
+edge* e_create(Shape* owner, vertex* u, vertex* v) {
+	edge* e = (edge*)calloc(1, sizeof(edge));
+	if (!e) {
+		throw AllocationProblem;
 	}
-
-	vertices.insert({u, u});
-	vertices.insert({v, v});
-	s->addEdge(this);
-	u->addToEdge(this);
-	v->addToEdge(this);
+	e->faces_set = hs_createSet<face*>(5);
+	e->owner = owner;
+	e->u = u;
+	e->v = v;
+	owner->addEdge(e);
+	return e;
 }
 
-const map<Vertex* const, Vertex* const> Edge::getVertices()
-{
-	return vertices;
-}
-
-
-void Edge::addToTriangle(Triangle* t) {
-	if (!t) {
-		throw IllegalArgument;
-	}
-	if (belongsTo(t)) {
+/*
+Free an edge
+*/
+void e_free(edge* e) {
+	if (!e->freeing) {
 		return;
 	}
-	triangles.insert({t,t});
-	++nbTriangles;
+	e->freeing = true;
+	auto f = [](face* f, void* ctx) {
+		f_free(f);
+	};
+	hs_forEach<face*, void*>(e->faces_set, f, nullptr);
+	hs_freeSet(e->faces_set);
+	free(e);
 }
 
-void Edge::removeFromTriangle(Triangle* t) {
-	if (!t) {
-		throw IllegalArgument;
-	}
-	if (!belongsTo(t)) {
-		return;
-	}
-	triangles.erase(t);
-	--nbTriangles;
+/*
+Add this edge to the face
+*/
+void e_addToFace(edge* e, face* f) {
+	hs_insert(e->faces_set, f);
 }
 
-bool Edge::belongsTo(Triangle* t) {
-	if (!t) {
-		throw IllegalArgument;
-	}
-	return mapContains(triangles,t);
+/*
+Remove this edge from the face
+*/
+void e_removeFromFace(edge* e, face* f) {
+	hs_remove(e->faces_set, f);
 }
 
-bool Edge::contains(Vertex* v) {
-	if (!v) {
-		throw IllegalArgument;
-	}
-	return mapContains(vertices, v);
-}
-
-void Edge::remove() {
-
-	std::function<void(Triangle* const)> lambdat = [](Triangle* const e) { e->remove(); };
-	mapForEach(triangles, lambdat);
-	for (map<Vertex* const, Vertex* const>::iterator it = vertices.begin(); it != vertices.end(); ++it) {
-		it->first->removeFromEdge(this);
-	}
-	ownerShape->removeEdge(this);
-	delete this;
-}
-
-
-Shape* Edge::getOwner() {
-	return ownerShape;
+/*
+Check if this edge belongs to that face
+*/
+bool e_belongsTo(edge* e, face* f) {
+	face** check = hs_find(e->faces_set, f);
+	return check;
 }

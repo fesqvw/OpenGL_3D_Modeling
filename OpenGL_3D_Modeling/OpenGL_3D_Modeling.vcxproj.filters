@@ -48,6 +48,12 @@
     <ClCompile Include="C:\c++ stuff\OpenGLTest\OpenGLTest\glad.c">
       <Filter>Source Files\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="CustomSet.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="3dTypes.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Edge.h">
@@ -70,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="MapUtils.h">
       <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="HashSet.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="3dTypes.h">
+      <Filter>Source Files\3D</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

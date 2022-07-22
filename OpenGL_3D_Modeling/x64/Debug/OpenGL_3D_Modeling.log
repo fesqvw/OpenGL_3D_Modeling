@@ -1,30 +1,17 @@
 ﻿  Edge.cpp
-D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\MapUtils.h(9,6): warning C4834: discarding return value of function with 'nodiscard' attribute
-D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Edge.cpp(52): message : see reference to function template instantiation 'bool mapContains<Triangle*>(std::map<Triangle *const ,Triangle *const ,std::less<Triangle *const >,std::allocator<std::pair<Triangle *const ,Triangle *const >>>,T)' being compiled
-          with
-          [
-              T=Triangle *
-          ]
-  Shape.cpp
-D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\MapUtils.h(9,6): warning C4834: discarding return value of function with 'nodiscard' attribute
-D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Shape.cpp(82): message : see reference to function template instantiation 'bool mapContains<Vertex*>(std::map<Vertex *const ,Vertex *const ,std::less<Vertex *const >,std::allocator<std::pair<Vertex *const ,Vertex *const >>>,T)' being compiled
-          with
-          [
-              T=Vertex *
-          ]
-D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Shape.cpp(46): message : see reference to function template instantiation 'void Shape::addElement<Vertex*>(std::map<Vertex *const ,Vertex *const ,std::less<Vertex *const >,std::allocator<std::pair<Vertex *const ,Vertex *const >>>,const T,size_t *)' being compiled
-          with
-          [
-              T=Vertex *
-          ]
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Edge.cpp(15,7): error C2027: use of undefined type 'Shape'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Edge.h(18): message : see declaration of 'Shape'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Edge.cpp(28,3): error C3861: 'f_free': identifier not found
   Triangle.cpp
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.cpp(11,7): error C2027: use of undefined type 'Shape'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.h(58): message : see declaration of 'Shape'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.cpp(14,43): error C2027: use of undefined type 'edge'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.h(56): message : see declaration of 'edge'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.cpp(17,6): error C2027: use of undefined type 'edge'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.h(56): message : see declaration of 'edge'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.cpp(21,26): error C2027: use of undefined type 'edge'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Triangle.h(56): message : see declaration of 'edge'
   Vertex.cpp
-D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\MapUtils.h(9,6): warning C4834: discarding return value of function with 'nodiscard' attribute
-D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Vertex.cpp(45): message : see reference to function template instantiation 'bool mapContains<Edge*>(std::map<Edge *const ,Edge *const ,std::less<Edge *const >,std::allocator<std::pair<Edge *const ,Edge *const >>>,T)' being compiled
-          with
-          [
-              T=Edge *
-          ]
-  main.cpp
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Vertex.cpp(14,7): error C2027: use of undefined type 'Shape'
+D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\Vertex.h(30): message : see declaration of 'Shape'
   Generating Code...
-  OpenGL_3D_Modeling.vcxproj -> D:\projects\OpenGL_3D_Modeling\OpenGL_3D_Modeling\x64\Debug\OpenGL_3D_Modeling.exe

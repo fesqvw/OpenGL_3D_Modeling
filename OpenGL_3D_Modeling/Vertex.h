@@ -1,37 +1,72 @@
 #pragma once
-
 #include "Error.h"
+#include "HashSet.h"
+
+#include "Edge.h"
+
 #include <map>
-#include<iostream>
-#include<iterator>
-#include<tuple>
+#include <iostream>
+#include <iterator>
+#include <tuple>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
+/*
+* 3D coordinates
+*/
+struct coordinates {
+	float x;
+	float y;
+	float z;
+};
+
+//TODO : we will need a way to select it with the mouse
+//TODO : we will need a way to change the position -> will need to notify the edges and triangles
+//TODO : we will need a way to draw the vertex
+//TODO : refactor -> put the definitions in the .cpp
+
+struct edge;
 class Shape;
-class Edge;
 
 /*
-An edge : it is defined by 1 point in space, with 3 coordinates (x,y,z)
-@author : Abel Vexina Wilkinson (Fesq vw)
+* A vertex 
 */
-class Vertex {
+struct vertex {
+	coordinates pos;
+	Shape* owner = nullptr;
+	hash_set<edge*>* edges_set = nullptr;
+	bool freeing = false;
+} ;
 
-	//TODO : we will need a way to select it with the mouse
-	//TODO : we will need a way to change the position
-	//TODO : we will need a way to draw the vertex
-public:
-	Vertex(Shape* s, float x, float y, float z);
-	void addToEdge(Edge* e);
-	void removeFromEdge(Edge* e);
-	bool belongsTo(Edge* e);
-	void remove();
-	Shape* getOwner();
+/*
+* Create a vertex
+*/
+vertex* v_create(Shape* owner, coordinates coords);
 
-private:
-	const float x = 0.0;
-	const float y = 0.0;
-	const float z = 0.0;
-	map< Edge* const, Edge* const> edges;
-	size_t nbEdges = 0;
-	Shape* const ownerShape = nullptr;
-};
+/*
+* Free a vertex : serves as the deletion mechanism
+*/
+void v_free(vertex* v);
+
+/*
+* Add the edge to the list of edges of the vertex
+* - one of the vertices of that edge is this vertex
+*/
+void v_addToEdge(vertex* v, edge* e);
+/*
+* Remove the edge to the list of edges of the vertex
+*/
+void v_removeFromEdge(vertex* v, edge* e);
+
+/*
+* Check whether this vertex belongs to this edge
+*/
+bool v_belongsTo(vertex* v, edge* e);
+
+/*
+* Change the position of the vertex
+*/
+void v_changePos(vertex* v, coordinates newPos);
+
+

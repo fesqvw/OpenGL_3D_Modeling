@@ -1,10 +1,13 @@
 #pragma once
 //1 shape is defined by all the triangles it contains
-#include "Triangle.h"
-#include "Edge.h"
-#include "Vertex.h"
 #include "Error.h"
 #include "Primitive.h"
+#include "HashSet.h"
+
+#include "Vertex.h"
+#include "Edge.h"
+#include "Triangle.h"
+
 
 #include <iostream>
 #include <iterator>
@@ -13,11 +16,16 @@
 #include<array> // for array, at()
 #include<tuple> // for get()
 
+
 /*
 A Shape : it is defined by the triangles it is composed of and the edges which not yet create a triangle
 It is mutable, as such the triangles can change, reduce, and expand
 @author : Abel Vexina Wilkinson (Fesq vw)
 */
+
+struct vertex;
+struct edge;
+struct face;
 
 class Shape {
 
@@ -25,27 +33,22 @@ class Shape {
 	//TODO : we will need a way to change the position of all vertices
 	//TODO : we will need a way to draw the whole shape
 public:
-	Shape(Primitive p); 
+	Shape(Primitive p);
+	~Shape();
 	void addShape(Shape* s); //TODO : define it once that will be used - not yet
-	void addVertex(Vertex* v);
-	void removeVertex(Vertex* v);
-	void addEdge(Edge *e);
-	void removeEdge(Edge* e);
-	void addTriangle(Triangle* t);
-	void removeTriangle(Triangle* t);
-	void remove();
+	void addVertex(vertex* v);
+	void removeVertex(vertex* v);
+	void addEdge(edge *e);
+	void removeEdge(edge* e);
+	void addFace(face* f);
+	void removeFace(face* f);
+	void free();
+	
+	void draw();
 
 private:
-	Shape(Triangle** triangles, size_t n);
-	map<Triangle* const, Triangle* const> triangles;
-	size_t nbTriangles = 0;
-	map<Edge* const, Edge* const> edges;
-	size_t nbEdges = 0;
-	map<Vertex* const, Vertex* const> vertices;
-	size_t nbVertices = 0;
+	hash_set<face*>* faces = nullptr;
+	hash_set<edge*>* edges = nullptr;
+	hash_set<vertex*>* vertices = nullptr;
 
-	template <typename T>
-	void addElement(map<T const, T const> toAddMap, T const elem, size_t* counter);
-	template <typename T>
-	void removeElement(map<T const, T const> toAddMap, T const elem, size_t* counter);
 };

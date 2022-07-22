@@ -1,58 +1,45 @@
 #include "Triangle.h"
-#include "Shape.h"
-#include "MapUtils.h"
 
 /*
-Create a triangle while having all the information
+Create a face
 */
-Triangle::Triangle(Shape* s , array<Edge*, 3> edges) : ownerShape(s)
-{
-	if (!s || edges.size() != 3) {
-		throw IllegalArgument;
-	}
-	for (int i = 0 ; i < 3 ; ++i) //add all edges to the triangle
-	{
-		if (!edges[i]) {
+face* f_create(Shape* owner, edge** creationEdges, size_t nbEdges) {
+	face* f = (face*)calloc(1, sizeof(face));
+	f->owner = owner;
+	f->edges = creationEdges;
+	f->nbEdges = nbEdges;
+	owner->addFace(f);
+
+	//Check if edges create a cycle
+	vertex* prev = creationEdges[nbEdges - 1]->v;
+	f->nbVertices = nbEdges;
+	for (int i = 0; i < nbEdges; ++i) {
+		if (prev != creationEdges[i]->u) {
+			free(f);
 			throw IllegalArgument;
 		}
-		this->edges.insert({ edges[i], edges[i] });
-		map<Vertex* const, Vertex* const> edgeVertices = edges[i]->getVertices(); //add teh vertices of every edge, there should be (exactly) 3 distinct ones
-
-		std::function<void(Vertex* const)> lambda = [](Vertex* const e) { e->remove(); };
-		mapForEach(edgeVertices, lambda);
-		
-	}
-
-	if (this->edges.size() != 3 || this->vertices.size() != 3) { //check that the arguments are correct
-		this->edges.clear();
-		this->vertices.clear();
-		delete this;
-		throw IllegalArgument;
-	}
-	
-	//everything is correct 
-	for (int i = 0; i < 3; ++i) //notify the edges they have been added to this triangle
-	{
-		edges[i]->addToTriangle(this);
+		prev = creationEdges[i]->v;
 	}
 }
 
-const map<Edge* const, Edge* const> Triangle::getEdges() {
-	return edges;
+void f_free(face* f) {
+	free(f);
 }
 
-const map<Vertex* const, Vertex* const> Triangle::getVertices() {
-	return vertices;
+bool f_containsVertex(face* f, vertex* v) {
+	for (int i = 0; i < f->nbVertices; ++i) {
+		if (f->vertices[i] == v) {
+			return true;
+		}
+	}
+	return false;
 }
 
-void Triangle::remove() {
-
-	std::function<void(Edge* const)> lambda = [](Edge* const e) { e->remove(); };
-	mapForEach(edges, lambda);
-	ownerShape->removeTriangle(this);
-	delete this;
-}
-
-Shape* Triangle::getOwner() {
-	return ownerShape;
+bool f_containsEdge(face* f, edge* e) {
+	for (int i = 0; i < f->nbVertices; ++i) {
+		if (f->edges[i] == e) {
+			return true;
+		}
+	}
+	return false;
 }

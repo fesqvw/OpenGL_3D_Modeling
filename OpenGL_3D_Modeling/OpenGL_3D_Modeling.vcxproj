@@ -142,7 +142,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="3dTypes.cpp" />
     <ClCompile Include="C:\c++ stuff\OpenGLTest\OpenGLTest\glad.c" />
+    <ClCompile Include="CustomSet.cpp" />
     <ClCompile Include="Edge.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Shape.cpp" />
@@ -152,6 +154,8 @@
     <ClCompile Include="Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="3dTypes.h" />
+    <ClInclude Include="HashSet.h" />
     <ClInclude Include="Edge.h" />
     <ClInclude Include="Error.h" />
     <ClInclude Include="Primitive.h" />

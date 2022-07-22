@@ -1,59 +1,67 @@
-//1 vertex is defined by 3 points in space
 #include "Vertex.h"
-#include "Edge.h"
-#include "Shape.h"
-#include "MapUtils.h"
 
-Vertex::Vertex(Shape* s, float x, float y, float z) : x(x),y(y),z(z),ownerShape(s) {
-	if (!s) {
-		throw IllegalArgument;
+/*
+* Create a vertex
+*/
+vertex* v_create(Shape* owner, coordinates coords) {
+	vertex* v = (vertex*)calloc(1, sizeof(vertex));
+	if (!v) {
+		throw AllocationProblem;
 	}
-	s->addVertex(this);
+	v->owner = owner;
+	v->pos = coords;
+	v->edges_set = hs_createSet<edge*>(10); //TODO : find the correct size
+	owner->addVertex(v);
+	return v;
 }
 
-
-void Vertex::addToEdge(Edge* const e) {
-	if (!e || !e->contains(this)) {
-		throw IllegalArgument;
-	}
-	if (belongsTo(e)) {
+/*
+* Free a vertex : serves as the deletion mechanism
+*/
+void v_free(vertex* v) {
+	if (!v->freeing) {
 		return;
 	}
-	edges.insert({ e, e });
-	++nbEdges;
+	v->freeing = true;
+	auto f = [](edge* e, void* ctx) {
+		e_free(e);
+	};
+	hs_forEach<edge*, void*>(v->edges_set, f, nullptr);
+	hs_freeSet(v->edges_set);
+	free(v);
 }
 
-void Vertex::removeFromEdge(Edge* const e) {
-	if (!e) {
-		throw IllegalArgument;
-	}
-	if (!belongsTo(e)) {
-		return;
-	}
-	edges.erase(e);
-	--nbEdges;
-	if (nbEdges == 0) {
-		remove();
+/*
+* Add the edge to the list of edges of the vertex
+* - one of the vertices of that edge is this vertex
+*/
+void v_addToEdge(vertex* v, edge* e) {
+	hs_insert(v->edges_set, e);
+}
+
+/*
+* Remove the edge to the list of edges of the vertex
+*/
+void v_removeFromEdge(vertex* v, edge* e) {
+	hs_remove(v->edges_set, e);
+	if (v->edges_set->count <= 0 && !v->freeing) {
+		v_free(v);
 	}
 }
 
-
-bool Vertex::belongsTo(Edge* const e) {
-	if (!e) {
-		throw IllegalArgument;
-	}
-	return mapContains(edges,e);
+/*
+* Check whether this vertex belongs to this edge
+*/
+bool v_belongsTo(vertex* v, edge* e) {
+	edge** check = hs_find(v->edges_set, e);
+	return check;
 }
 
-void Vertex::remove() {
-	std::function<void(Edge* const)> lambda = [](Edge* const e) { e->remove(); };
-	mapForEach(edges, lambda);
-	ownerShape->removeVertex(this);
-	delete this;
-}
-
-Shape* Vertex::getOwner() {
-	return ownerShape;
+/*
+* Change the position of the vertex
+*/
+void v_changePos(vertex* v, coordinates newPos) {
+	v->pos = newPos;
 }
 
 

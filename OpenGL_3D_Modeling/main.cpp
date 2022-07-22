@@ -6,9 +6,18 @@
 #include <glm/glm/gtc/matrix_transform.hpp>
 #include <glm/glm/gtc/type_ptr.hpp>
 
+#include "Shape.h"
+#include "Primitive.h"
+#include "HashSet.h"
+
+
+#include <functional>
+using namespace std;
+
 //EVENTS
 /*
 TODO : SEARCH/ADD DIFFERENT KINDS OF EVENTS
+TODO : create and add these into a WindowManager
 */
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
@@ -68,4 +77,74 @@ int main() {
 
 
 
+
+	/*
+	START TESTING GROUND
+	*/
+	Shape* s = new Shape(Primitive::SimpleTriangle);
+	delete s;
+	/*
+	END TESTING GROUND
+	*/
+
+
+
+
+	//test->remove(); //PROBLEMA ACA
+
+
+	while (!glfwWindowShouldClose(window)) {
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		processInput(window);
+		/*
+		TODO : define background color in window manager
+		*/
+		glClearColor(0.3f, 0.1f, 0.1f, 1.0f); //background : 
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		/*
+		TODO - window manager : draw window content 
+		*/
+		
+		/*
+		TODO : Figure out how to pass how things have to be drawn
+		Global state in window manager?
+		Global state for the main window?
+		As parameters for draw?
+		*/
+	//	Shape* testShape = new Shape(Primitive::SimpleTriangle);
+	//	testShape->draw();
+	//	testShape->remove();
+
+		glfwPollEvents();
+		glfwSwapBuffers(window);
+
+	}
+
+	return 0;
+}
+
+/*
+TODO : manage events in window manager
+TODO : window manager should contain info of all main viewPorts
+*/
+void framebuffer_size_callback(GLFWwindow* window, int widthF, int heightF) {
+
+	height = heightF;
+	width = widthF;
+	glViewport(0, 0, width, height);
+}
+
+void processInput(GLFWwindow* window) {
+}
+
+void mouse_callback(GLFWwindow* window, double xpos, double ypos){
+}
+
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset){
+}
+
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+{
 }
